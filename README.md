@@ -29,5 +29,7 @@ Built an end-to-end machine learning pipeline to **optimize gold recovery from o
 ### Result
 Achieved a **final sMAPE ≈ 7.24** (lower is better), enabling accurate recovery predictions to support process optimization without running expensive physical experiments.
 
+---
+
 ### Tools
 Python, pandas, NumPy, matplotlib, scikit-learn (SimpleImputer, RandomForestRegressor, KFold, GridSearchCV, custom scoring)
