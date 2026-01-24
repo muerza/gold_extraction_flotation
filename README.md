@@ -4,10 +4,14 @@ Built an end-to-end machine learning pipeline to **optimize gold recovery from o
 - `rougher.output.recovery` (recovery after flotation)  
 - `final.output.recovery` (final recovery after purification)
 
+----
+
 ### Data & Setup
 - Datasets: `gold_recovery_train.csv`, `gold_recovery_test.csv`, `gold_recovery_full.csv`
 - Time-series indexed by `date` (used as the DataFrame index)
 - Train/test feature alignment using the intersection of columns (test has fewer features)
+
+---
 
 ### Workflow
 1. **Data validation & quality checks** (missing values, duplicates, timestamp integrity)
@@ -19,6 +23,8 @@ Built an end-to-end machine learning pipeline to **optimize gold recovery from o
    - sMAPE for each target
    - Final score = `0.25 * sMAPE(rougher) + 0.75 * sMAPE(final)`
 7. **Cross-validation & hyperparameter tuning** via `KFold` + `GridSearchCV`
+
+---
 
 ### Result
 Achieved a **final sMAPE ≈ 7.24** (lower is better), enabling accurate recovery predictions to support process optimization without running expensive physical experiments.
