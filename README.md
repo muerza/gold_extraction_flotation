@@ -1,4 +1,4 @@
-# Gold Recovery Optimization 🏭✨
+# Gold Recovery Optimization 🏭
 
 A Machine Learning project to **predict gold recovery** in an industrial process (*rougher* and *final* stages) to support **production optimization** and better decision-making.
 
