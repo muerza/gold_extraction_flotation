@@ -1,10 +1,10 @@
-# Gold Recovery Optimization 🏭
+# Gold Recovery Optimization 
 
 A Machine Learning project to **predict gold recovery** in an industrial process (*rougher* and *final* stages) to support **production optimization** and better decision-making.
 
 ---
 
-## Goal 🎯
+## Goal 
 Predict:
 - `rougher.output.recovery`
 - `final.output.recovery`
@@ -13,7 +13,7 @@ Using process features (concentrations, particle sizes, feed rates, etc.).
 
 ---
 
-## Data 📦
+## Data 
 Files used:
 - `gold_recovery_train.csv` → **(16860, 86)**
 - `gold_recovery_test.csv` → **(5856, 52)**
@@ -23,7 +23,7 @@ Files used:
 
 ---
 
-## Recovery Formula Check ✅
+## Recovery Formula Check 
 I validated the project’s recovery formula against `rougher.output.recovery`:
 
 - **MAE ≈ 9.30e-15** (basically 0)  
@@ -31,7 +31,7 @@ This confirms the target column is consistent with the expected calculation.
 
 ---
 
-## Metric 📏
+## Metric 
 Evaluation uses **sMAPE** and a weighted final score:
 
 - `sMAPE(rougher)`
@@ -40,7 +40,7 @@ Evaluation uses **sMAPE** and a weighted final score:
 
 ---
 
-## Approach 🧠
+## Approach 
 1. Load + explore the datasets
 2. Clean data (missing values, consistency checks, distribution review)
 3. Align features between train and test
@@ -50,7 +50,7 @@ Evaluation uses **sMAPE** and a weighted final score:
 
 ---
 
-## Results 📈
+## Results 
 Main model: **RandomForestRegressor (multi-output)**
 
 - Baseline (no tuning):  
@@ -60,8 +60,7 @@ Main model: **RandomForestRegressor (multi-output)**
   - `n_estimators=700, max_depth=None, min_samples_split=2`  
   - `sMAPE(rougher) ≈ 8.035`  
   - `sMAPE(final) ≈ 6.9762`  
-  - ✅ **sMAPE_final ≈ 7.2409**
+  - **sMAPE_final ≈ 7.2409**
 
 ---
-
-## Suggested Repo Structure 🗂️
+ 
